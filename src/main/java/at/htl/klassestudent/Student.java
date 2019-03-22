@@ -5,7 +5,7 @@ public class Student implements Comparable<Student> {
     private String vorname;
     private String nachname;
 
-    public Student() {
+    public Student(String s) {
     }
 
     public Student(String vorname, String nachname) {

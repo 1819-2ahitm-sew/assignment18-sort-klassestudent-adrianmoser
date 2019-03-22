@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.lessThan;
 import static org.hamcrest.core.Is.is;
-import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
 
@@ -34,6 +33,9 @@ class StudentTest {
     }
 
     @Test
-    public void klasse_insertAStudent_success
+    public void klasse_insertAStudent_success() {
+        Student magda = new Student("Magdalena", "Scholz");
+        Klasse klasse = new Klasse();
+    }
 
 }

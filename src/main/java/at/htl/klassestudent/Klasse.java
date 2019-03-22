@@ -1,26 +1,38 @@
 package at.htl.klassestudent;
 
-import java.util.Arrays;
-
 public class Klasse {
 
-    private int klassenbezeichnung;
+    private String klassenbezeichnung;
     private Student[] students;
 
     public Klasse() {
-        students = new Student[30];
     }
 
-    public Klasse(int klassenbezeichnung, Student[] students) {
+    public Klasse(String klassenbezeichnung, Student[] students) {
+        this();
         this.klassenbezeichnung = klassenbezeichnung;
-        this.students = students;
     }
 
-    public int getKlassenbezeichnung() {
+    public Klasse(String s) {
+
+    }
+
+    public void add(Student student) {
+        if (students == null) {
+            students = new Student[1];
+        } else {
+            Student[] help = new Student[students.length + 1];
+            help[0] = students[0];
+            help[1] = student;
+        }
+        students[students.length - 1] = student;
+    }
+
+    public String getKlassenbezeichnung() {
         return klassenbezeichnung;
     }
 
-    public void setKlassenbezeichnung(int klassenbezeichnung) {
+    public void setKlassenbezeichnung(String klassenbezeichnung) {
         this.klassenbezeichnung = klassenbezeichnung;
     }
 
